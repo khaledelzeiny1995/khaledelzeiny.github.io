@@ -1,4 +1,4 @@
-# mywebsite
+# khaled-website
 
 ## Project setup
 ```
