@@ -1,24 +1,22 @@
 # khaled-website
 
-## Project setup
+### To build the dev docker container execute the following:.
 ```
-yarn install
+docker build -t vuejs-khaled-site/dockerize-vuejs-app .
+
 ```
 
-### Compiles and hot-reloads for development
+### Locate your image id using the following:. 
 ```
-yarn serve
+ docker images
 ```
+### eg
+```
+REPOSITORY                                TAG                 IMAGE ID            CREATED              SIZE
+vuejs-khaled-site/dockerize-vuejs-app     latest              faf3b69a50d5        About a minute ago   547MB
+```
+### to spin the app after dockerize 
 
-### Compiles and minifies for production
 ```
-yarn build
+docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-1 vuejs-Khaled-site/dockerize-vuejs-app
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

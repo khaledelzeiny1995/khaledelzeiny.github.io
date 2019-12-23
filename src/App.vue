@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <section id="Home">
+      <header>
      <vs-navbar v-model="activeItem" class="nabarx">
       <div slot="title">
         <vs-navbar-title>
@@ -21,7 +22,13 @@
         <a href="#Contact">Contact</a>
       </vs-navbar-item>
     </vs-navbar>
+      </header>
 
+
+      <div id = "stars"></div>
+      <div id = "star2"></div>
+      <div id = "star3"></div>
+      
     <h1>Welcome To</h1>
     <h2> Khaled Elzeiny Website </h2>
 
