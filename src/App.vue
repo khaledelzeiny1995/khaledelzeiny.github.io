@@ -62,4 +62,15 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+
+section {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 </style>
