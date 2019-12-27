@@ -18,5 +18,5 @@ vuejs-khaled-site/dockerize-vuejs-app     latest              faf3b69a50d5      
 ### to spin the app after dockerize 
 
 ```
-docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-1 vuejs-Khaled-site/dockerize-vuejs-app
+docker run -it -p 8080:8080 --rm --name dockerize-vuejs-app-1 vuejs-khaled-site/dockerize-vuejs-app
 ```

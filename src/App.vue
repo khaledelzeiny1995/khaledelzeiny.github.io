@@ -1,63 +1,86 @@
 <template>
-  <div id="app">
-    <section id="Home">
-      <header>
-     <vs-navbar v-model="activeItem" class="nabarx">
-      <div slot="title">
-        <vs-navbar-title>
-          Khaled Elzeiny 
-        </vs-navbar-title>
-      </div>
 
-      <vs-navbar-item index="0">
-        <a href="#Home">Home</a>
-      </vs-navbar-item>
-      <vs-navbar-item index="1">
-        <a href="#About">About</a>
-      </vs-navbar-item>
-      <vs-navbar-item index="2">
-        <a href="#Expereince">Expereince</a>
-      </vs-navbar-item>
-      <vs-navbar-item index="2">
-        <a href="#Contact">Contact</a>
-      </vs-navbar-item>
-    </vs-navbar>
+  <div id="app">
+<link rel="stylesheet" 
+        href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <header>
+      <div class = "container-navbar">
+        <img src = "./assets/Khaled.png" alt = "logo" class = "logo" >
+        <nav>
+          <ul>
+           <li><a href = "#Home">Home </a></li>
+           <li><a href = "#About">About</a></li>
+           <li><a href = "#">Expereince</a></li>
+           <li><a href = "#">Contact</a></li>      
+          </ul>
+          </nav>
+      </div>
       </header>
 
+      <!-- Home section -->
+      <section id = "Home" class = "container-SectionHome">
 
-      <div id = "stars"></div>
-      <div id = "star2"></div>
-      <div id = "star3"></div>
-      
-    <h1>Welcome To</h1>
-    <h2> Khaled Elzeiny Website </h2>
+        <vue-particles color="#191919"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+        >
+        </vue-particles>
 
-  </section>
-  <section id="About">
-    here i am going to talk about my self , my life , my hoppy , and what i engoy 
-  </section>
+        <div id= "section-text">
+        <h3> Welcome To</h3>
+        <h1> Khaled Elzeiny </h1>
+        <h3> junoir Full stack Devloper / junoir software Engineer </h3>
+        </div>
+      </section>
 
-  <section id="Expereince">
-    here i am going to talk about my expeerince in coding and bar for each coding expereince 
-  </section>
 
-  <section id="contact">
+      <section id = "About">
+        <img src= "./assets/me.jpg" class = "profileimg">
+        <p class = "text-01"> Hi , I am khaled Elzeiny  </p>
+        <p class = "text-02"> I am international student living in canada , winnipeg - Maniotoba . I am in my 4th year in University of manitoba majoring in computer scinece - softaware eningeer</p>
+        
+        </section>
 
-    contaxt , inculde facebook , github , linkedin , and otherr 
-  </section>
-  </div>
-</template>
+        <section id = "expereince">
+
+          i am talking here about my expereince in repsoenseie bar 
+
+          <ProgressBar> </ProgressBar>
+          </section>
+
+          <section id = "contact">
+            
+            <contact> </contact>
+            </section>
+
+
+</div> <!-- End of the main div -->
+</template> <!-- end of the template -->
 
 <script>
+import ProgressBar from './components/ProgressBar.vue'
+import Contact from './components/Contact.vue'
+
 
 export default {
   name: 'app',
-  data()
-  {
-    return{
-      activeItem: 0,
-    }
-  },
+  components: {
+    ProgressBar,
+    Contact,
+  }
 }
 </script>
 
@@ -66,18 +89,158 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+   background: #FFFAFA;
+}
+.logo
+{
+   display: block;
+   max-width: 2.5%;
+   height: auto
+}
+
+/* this is the css For Nav-bar */
+.container-navbar
+{
+  width:80%;
+  margin: 0 auto;
+  border: #191919;
+}
+header
+{
+  background: #FFFAFA;
+}
+
+header::after
+{
+  content: '';
+  display: table;
+  clear:both;
+}
+.logo
+{
+  float:left;
+  padding: 10px 0;
+}
+
+nav
+{
+  float:right;
+}
+
+nav ul
+{
+  margin:0;
+ padding:0;
+ list-style: none;
+}
+nav li
+{
+  display: inline-block;
+  margin-left:70px;
+  padding-top:15px;
+  position: relative;
+}
+
+nav a
+{
+  color:#191919;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+nav a:hover
+{
+  color: #191919;
+}
+
+nav a::before
+{
+  content: '';
+  display: block;
+  height: 5px;
+  background-color:#191919;
+
+  position: absolute;
+  top:0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+
+}
+
+nav a:hover::before
+{
+  width : 100%;
 }
 
 
-section {
+/* for the Home Section */
+
+.container-SectionHome
+{
+  background-image: url("cool.png");
+  background-size: 100%;
+}
+
+section
+{
+  display: block;
+}
+
+div [id= "section-text"]
+{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -200%);text-align: center;
+  text-align: center;
+}
+/*my profile picture */
+.profileimg
+{
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, 300%);
+}
+/* section About css */
+section[id = "About"]
+{
     height: 100vh;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
+.text-01
+{
+  position: relative;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -300%);
+
+}
+
+.text-02
+{
+  
+  position: relative;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+/* section Expereincse css */
+ section[id = "expereince"]
+ {
+    height: 100vh;
+    align-items: center;
+ }
+
 </style>
+
+
