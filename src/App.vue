@@ -11,8 +11,8 @@
           <ul>
            <li><a href = "#Home">Home </a></li>
            <li><a href = "#About">About</a></li>
-           <li><a href = "#">Expereince</a></li>
-           <li><a href = "#">Contact</a></li>      
+           <li><a href = "#expereince">Expereince</a></li>
+           <li><a href = "#contact">Contact</a></li>      
           </ul>
           </nav>
       </div>
@@ -51,7 +51,7 @@
         <img src= "./assets/me.jpg" class = "profileimg">
         <p class = "text-01"> Hi , I am khaled Elzeiny  </p>
         <p class = "text-02"> I am international student living in canada , winnipeg - Maniotoba . I am in my 4th year in University of manitoba majoring in computer scinece - softaware eningeer</p>
-        
+
         </section>
 
         <section id = "expereince">
@@ -59,11 +59,28 @@
           i am talking here about my expereince in repsoenseie bar 
 
           <ProgressBar> </ProgressBar>
+
+          <p>Eduction</p>
+          <p> Uninversity of manitoba - Computer Sceience (softaware Engineer)</p>
+          <P> 2015 - 2020 </P>
+
+          <P>Intership Expereince</p>
+          <p> Lily and Lou </p>
+          <P>front-End Devloper </p>
+
+          
           </section>
 
           <section id = "contact">
             
             <contact> </contact>
+
+            <div id = "email-name">
+              <input  class = "First-name" v-model="name" type="text" placeholder="FirstName">
+              <input  class = "Last-name"  v-model="name" type= "text" placeholder="LastName">
+              <input class = "Email"       v-model="email" type="email" placeholder="Email">
+
+            </div>
             </section>
 
 
@@ -228,7 +245,6 @@ section[id = "About"]
 
 .text-02
 {
-  
   position: relative;
   top: 50%;
   left:50%;
@@ -241,6 +257,42 @@ section[id = "About"]
     align-items: center;
  }
 
+/* section for contact css */
+
+section [id = "contact"]
+{
+  background-color: #191919;
+  height: 100vh;
+  align-items: center;
+}
+
+.First-name
+{
+  width: 20%;
+  color:#191919;
+  background-color: #FFFAFA;
+}
+
+.Last-name 
+{
+  width :20%;
+  color: #191919;
+  background: #FFFAFA;
+}
+.Email
+{
+  width :20%;
+  color: #191919;
+  background: #FFFAFA; 
+}
+
+div [id = "email-name"]
+{
+  position: relative;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -300%);
+}
 </style>
 
 

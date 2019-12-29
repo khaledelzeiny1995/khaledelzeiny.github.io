@@ -1,7 +1,12 @@
 <template>
     <div id = "Contact">
         <ul>
-            <li> khaled</li>
+            <li> Facebook</li>
+            <li> Instgram </li>
+            <li> LinkedIn </li>
+            <li> github </li>
+            <li> phone number </li>
+
             </ul>
         </div>
 </template>
@@ -20,6 +25,9 @@ export default {
 
 
 <style scoped>
+
+
+
 li {
     position: relative;
     list-style: none;

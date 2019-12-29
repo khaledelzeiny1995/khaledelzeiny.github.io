@@ -69,6 +69,7 @@ li.java:after {
     }
 }
 
+
 li.vue:after {
     animation-name: vue;
 }
