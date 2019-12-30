@@ -1,8 +1,7 @@
 <template>
 
   <div id="app">
-<link rel="stylesheet" 
-        href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 
     <header>
       <div class = "container-navbar">
