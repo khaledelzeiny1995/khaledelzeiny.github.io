@@ -1,106 +1,36 @@
 <template>
+    <div id="app">
 
-  <div id="app">
-<link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-
-    <header>
+        <header>
+        <link rel="stylesheet" href="animate.min.css">
       <div class = "container-navbar">
         <img src = "./assets/Khaled.png" alt = "logo" class = "logo" >
-        <nav>
+         <nav>
           <ul>
-           <li><a href = "#Home">Home </a></li>
-           <li><a href = "#About">About</a></li>
-           <li><a href = "#expereince">Expereince</a></li>
-           <li><a href = "#contact">Contact</a></li>      
+           <li><router-link to = "/">Home</router-link></li>
+           <li><router-link to ="/about">About</router-link></li>
+           <li><router-link to ="/expereince">Expereince</router-link></li>
+           <li><router-link to ="/Contact">Contact</router-link></li>      
           </ul>
           </nav>
-      </div>
+      </div> <!-- End of nav bar div -->
       </header>
+        <transition name = "router-anim">
+        <router-view/>
+        </transition>
+      </div> <!-- End of the main app -->
 
-      <!-- Home section -->
-      <section id = "Home" class = "container-SectionHome">
-
-        <vue-particles color="#191919"
-        :particleOpacity="0.7"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-        >
-        </vue-particles>
-
-        <div id= "section-text">
-        <h3> Welcome To</h3>
-        <h1> Khaled Elzeiny </h1>
-        <h3> junoir Full stack Devloper / junoir software Engineer </h3>
-        </div>
-      </section>
-
-
-      <section id = "About">
-        <img src= "./assets/me.jpg" class = "profileimg">
-        <p class = "text-01"> Hi , I am khaled Elzeiny  </p>
-        <p class = "text-02"> I am international student living in canada , winnipeg - Maniotoba . I am in my 4th year in University of manitoba majoring in computer scinece - softaware eningeer</p>
-
-        </section>
-
-        <section id = "expereince">
-
-          i am talking here about my expereince in repsoenseie bar 
-
-          <ProgressBar> </ProgressBar>
-
-          <p>Eduction</p>
-          <p> Uninversity of manitoba - Computer Sceience (softaware Engineer)</p>
-          <P> 2015 - 2020 </P>
-
-          <P>Intership Expereince</p>
-          <p> Lily and Lou </p>
-          <P>front-End Devloper </p>
-
-          
-          </section>
-
-          <section id = "contact">
-            
-            <contact> </contact>
-
-            <div id = "email-name">
-              <input  class = "First-name" v-model="name" type="text" placeholder="FirstName">
-              <input  class = "Last-name"  v-model="name" type= "text" placeholder="LastName">
-              <input class = "Email"       v-model="email" type="email" placeholder="Email">
-
-            </div>
-            </section>
-
-
-</div> <!-- End of the main div -->
-</template> <!-- end of the template -->
+</template>
 
 <script>
-import ProgressBar from './components/ProgressBar.vue'
-import Contact from './components/Contact.vue'
-
 
 export default {
-  name: 'app',
-  components: {
-    ProgressBar,
-    Contact,
-  }
+  
 }
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -189,109 +119,40 @@ nav a:hover::before
   width : 100%;
 }
 
-
-/* for the Home Section */
-
-.container-SectionHome
+.router-anim-enter-active
 {
-  background-image: url("cool.png");
-  background-size: 100%;
+  animation: coming 1s;
+  animation-delay:.5s;
+  opacity: 0;
 }
 
-section
+.router-anim-leave-active
 {
-  display: block;
+  animation:going 1s;
 }
 
-div [id= "section-text"]
-{
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -200%);text-align: center;
-  text-align: center;
-}
-/*my profile picture */
-.profileimg
-{
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, 300%);
-}
-/* section About css */
-section[id = "About"]
-{
-    height: 100vh;
-    align-items: center;
-    text-align: center;
-    
+@keyframes going {
+  from
+  {
+    transform: translateX(0px);
+  }
+  to
+  {
+    transform: translateX(-50px);
+  }
 }
 
-.text-01
-{
-  position: relative;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -300%);
 
-}
-
-.text-02
-{
-  position: relative;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-}
-/* section Expereincse css */
- section[id = "expereince"]
- {
-    height: 100vh;
-    align-items: center;
- }
-
-/* section for contact css */
-
-section [id = "contact"]
-{
-  background-color: #191919;
-  height: 100vh;
-  align-items: center;
-}
-
-.First-name
-{
-  width: 20%;
-  color:#191919;
-  background-color: #FFFAFA;
-}
-
-.Last-name 
-{
-  width :20%;
-  color: #191919;
-  background: #FFFAFA;
-}
-.Email
-{
-  width :20%;
-  color: #191919;
-  background: #FFFAFA; 
-}
-
-div [id = "email-name"]
-{
-  position: relative;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -300%);
+@keyframes coming {
+  from
+  {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to 
+  {
+    transform: translateX(0px);
+    opacity: 1 ;
+  }
 }
 </style>
-
-

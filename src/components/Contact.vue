@@ -21,8 +21,6 @@ export default {
 
 <style scoped>
 
-
-
 li {
     position: relative;
     list-style: none;

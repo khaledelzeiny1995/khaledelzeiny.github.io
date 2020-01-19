@@ -6,7 +6,6 @@
       <li class = "vue"> Vue / front-End Development </li>
       <li class = "docker"> Docker</li>   
       </ul>
-
   </div>
 </template>
 
