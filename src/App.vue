@@ -9,7 +9,7 @@
           <ul>
            <li><router-link to = "/">Home</router-link></li>
            <li><router-link to ="/about">About</router-link></li>
-           <li><router-link to ="/expereince">Expereince</router-link></li>
+           <li><router-link to ="/exp">Expereince</router-link></li>
            <li><router-link to ="/Contact">Contact</router-link></li>      
           </ul>
           </nav>
@@ -119,40 +119,4 @@ nav a:hover::before
   width : 100%;
 }
 
-.router-anim-enter-active
-{
-  animation: coming 1s;
-  animation-delay:.5s;
-  opacity: 0;
-}
-
-.router-anim-leave-active
-{
-  animation:going 1s;
-}
-
-@keyframes going {
-  from
-  {
-    transform: translateX(0px);
-  }
-  to
-  {
-    transform: translateX(-50px);
-  }
-}
-
-
-@keyframes coming {
-  from
-  {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to 
-  {
-    transform: translateX(0px);
-    opacity: 1 ;
-  }
-}
 </style>
