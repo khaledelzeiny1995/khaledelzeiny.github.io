@@ -3,6 +3,11 @@
 
 
           <img src= "./me.jpg" class = "profileimg">
+
+          <div class = "text-03">
+            <p> WHO AM I ? </p>
+            <p> I,am computer Sceince student in my last year. I am full stack developer </p>
+            </div>
       </div> <!-- end of the about div -->    
 </template>
 
@@ -33,19 +38,9 @@ export default {
 }
 
 
-.about-line
-{
-   width: 30%;
-   align-items: center;
-}
 
 
 /*my profile picture */
-
-.text-02
-{
-  margin:0.1%;
-}
 
 @media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)
 {

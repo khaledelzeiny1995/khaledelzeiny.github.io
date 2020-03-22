@@ -1,10 +1,18 @@
 <template>
   <div id = "progressBar">
     <ul>
-      <li class = "html">HTML / CSS</li>
-      <li class = "java"> JAVA </li>
-      <li class = "vue"> Vue / front-End Development </li>
-      <li class = "docker"> Docker</li>   
+        
+      <li class = "html">Html</li>
+      <li class = "html"> Css </li>
+      <li class = "java"> Java</li>
+      <li class = "java"> python </li>
+      <li class = "docker"> Docker cloud platform </li> 
+      <li class = "vue"> Vue.js</li>
+      <li class = "react"> React.js</li> 
+      <li class = "django">Django REST framework </li> 
+      <li class = "node"> Node.js / Express.js</li> 
+      <li class = "git"> Git / Github </li> 
+
       </ul>
   </div>
 </template>
@@ -22,7 +30,6 @@ li {
     list-style: none;
     margin: 50px 0;
     font-weight: 500;
-    text-transform: uppercase;
 }
 
 li:before {
@@ -48,27 +55,31 @@ li:after {
     animation-fill-mode: forwards;
 }
 
+
+
+/* HTML and CSS bar */
 li.html:after {
     animation-name: html;
 }
 
 @keyframes html {
     to {
-        width: 90%;
+        width: 70%;
     }
 }
 
+/* Java and Python bar */
 li.java:after {
     animation-name: java;
 }
 
 @keyframes java {
     to {
-        width: 80%;
+        width: 65%;
     }
 }
 
-
+/* Vue bar */
 li.vue:after {
     animation-name: vue;
 }
@@ -79,6 +90,7 @@ li.vue:after {
     }
 }
 
+/* docker bar */
 li.docker:after {
     animation-name: docker;
 }
@@ -87,8 +99,55 @@ li.docker:after {
     to {
         width: 60%;
     }
-
-    
 }
 
+/* react bar */
+li.react:after {
+    animation-name: react;
+}
+
+@keyframes react {
+    to {
+        width: 40%;
+    }
+}
+/* node bar */
+li.node:after {
+    animation-name: node;
+}
+
+@keyframes node {
+    to {
+        width: 50%;
+    }   
+}
+
+/* django bar */
+li.django:after {
+    animation-name: django;
+}
+
+@keyframes django {
+    to {
+        width: 40%;
+    }   
+}
+
+/* git bar */
+li.git:after {
+    animation-name: git;
+}
+
+@keyframes git {
+    to {
+        width: 70%;
+    }   
+}
+
+/* resposive part for thr porgressBar */
+
+@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)
+{
+
+}
 </style>

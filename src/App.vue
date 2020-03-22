@@ -50,7 +50,7 @@
         </div>
 
         <div class = "About button">
-           
+           <button class="home-button"></button>
         </div>
     </section>
 
@@ -77,13 +77,17 @@
     <!-- Section for the expereince -->
     <section class = " section-01 section-03" id = "Expereince">
 
-   
+      <div class = "Expereince-postion">
+       <p class = "text-01"> Expereince </p>
+       </div>
+
+       <Expereience> </Expereience>
     </section>
 
 
     <!--Section for the Contact -->
     <section class = " section-01 section-04" id = "Contact">
-
+      <contact class = "contact-postion"> </contact>
     </section>
 
   </div>  <!-- end of the main div -->
@@ -92,24 +96,32 @@
 
 <script>
 import About from "./components/About.vue"
-//import Contact from "./components/Contact.vue"
+import Contact from "./components/Contact.vue"
 import ProgressBar from "./components/ProgressBar.vue"
+import Expereience from "./components/Experience.vue"
 
 
 export default {
 
  
   name: 'App',
+
   components:
   {
     About,
-    //Contact,
+    Contact,
     ProgressBar,
+    Expereience
   },
 }
 </script>
 
 <style scooped>
+
+.text-02
+{
+  margin:0.1%;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
@@ -266,7 +278,7 @@ nav a:hover::before
   float:right;
   width: 50%;
   margin-right: 3%;
-  margin-top: 3%;
+  margin-top: 0.5%;
   }
  /* align the div of the about title  */
 .about-title
@@ -274,39 +286,42 @@ nav a:hover::before
   align-items: center;
   text-align: center;
 }
-.about-line
+
+/* contact componet postion */
+.contact-postion
 {
-  float:center;
-  align-items: center;
-  width: 20%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  top:50%;
-  left: 50%;
-
+  position: relative;
+  margin-top: 10%;
 }
-
 /* my name css */
 .myname
 {
   color: #0B0C10;
   font-size: 130%;
 }
+/* vue particles align in the main section */
 .vue-particles
 {
     width: 100%;
     height:100%;
 }
 
+.Expereince-postion
+{
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
+}
 .section-02
 {
-  height:150vh;
-  background-color: #FFFAFA;
+  height:100vh;
+  background-color: white;
 } 
 
 .section-03
 {
-  background-color: #FFFAFA;
+  background-color: white;
 }
 
 .section-04

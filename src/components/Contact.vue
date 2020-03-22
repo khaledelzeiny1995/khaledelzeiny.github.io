@@ -46,7 +46,6 @@
 </template>
 
 
-
 <script>
 export default {
     name:'Contact',
@@ -101,25 +100,17 @@ export default {
 </script>
 
 <style scoped>
-
-div [id = "Contact"]
-{
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, 30%);
-  position:relative;
-}
 .Contact-title
 {
   text-align: center;
   position: relative;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
+  margin-top: 10%;
+ 
 }
 .Contact-title p
 {
   font-size: 140%;
+  position: relative;
 }
 form
 {
