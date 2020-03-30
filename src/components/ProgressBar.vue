@@ -50,8 +50,8 @@ li:after {
     width: 0;
     height: 15px;
     background-color: rgba(0, 0, 0);
-    animation-duration: .7s;
-    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
     animation-fill-mode: forwards;
 }
 
@@ -63,8 +63,12 @@ li.html:after {
 }
 
 @keyframes html {
-    to {
-        width: 70%;
+    0%{
+        width: 0%;
+    }
+    100%
+    {
+        width:70%;
     }
 }
 
@@ -148,6 +152,36 @@ li.git:after {
 
 @media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)
 {
+
+li {
+ position: relative;
+ list-style: none;
+ margin: 50px 0;
+ font-size: 80%;
+}
+
+li:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+li:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgba(0, 0, 0);
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+}
 
 }
 </style>

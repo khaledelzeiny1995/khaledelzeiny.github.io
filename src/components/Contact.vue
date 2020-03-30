@@ -1,121 +1,53 @@
 <template>
 
  <div id = "Contact">
-    <form @submit= "checkForm" >
+   
+    <!-- title of the contact Form --> 
+    
+      <form id  = "Contact-form">
 
-    <p v-if="errors.length">
-      <b>Please correct the following error(s):</b>
-    <ul>
-       <li v-for= "error in errors" :key= "error">
-           {{ error }}
-        </li>
-    </ul>
-  </p>     
-     
-     <div class = "Contact-title"> 
-       <p> Contact Me</p>
-       </div>
+        <div class = "Contact-form">
 
-       <div class = "contact-form">
-    <p class = "firstName"> 
-      <input id="firstname" class = "formStyle" v-model= "firstname" type="text" name="firstname" placeholder="Your First Name" >
-    </p>
+        <input type = "text" class = "formStyle" value= "" placeholder="Name" required>
 
-    <p> 
-      <input id="lastname" class = "formStyle" v-model= "lastsname" type="text" name="lastname" placeholder="Your Last Name" >
-    </p>
+        <input type = "email" class = "formStyle" value="" placeholder="name@email.com" required >
+
+        <textarea name="comment" class = "formStyle"  form="Contact-form" required placeholder ="Message"></textarea>
+
+        </div>
+        <input type= "submit"  class ="submit"  value="SUBMIT">
+
+      </form>
 
 
-    <p>
-    <input id="email"  class = "formStyle" v-model="email" type="email" name="email" placeholder="Your Email">
-    </p>
+</div> <!-- end of the Contact div -->
 
-     <p>
-    <textarea id="message" class = "formStyle" v-model= "messsage" type="text" name="message" placeholder="Your Message Here" rows="5">
-    </textarea>
-    </p>
-    <p>
-      <input  class ="submit" type="submit" value="SUBMINT">
-    </p>
-
-       </div> <!-- end of the contact form -->
-
-
-    </form> <!-- end of form -->
-  </div> <!-- end of contact div -->
 </template>
 
 
 <script>
-export default {
-    name:'Contact',
-    data()
-    {
-        return{
-           errors:[],
-           firstName:null,
-           lastName:null,
-           email:null,
-           messsage:null,
-        }
-    },
 
-    methods:
-    {
-         checkForm(e)
-         {
-             this.errors = [];
-
-             if (!this.firstName) 
-             {
-                   this.errors.push("Please Enter your First Name.");
-                 }
-
-              if(!this.lastName)
-              {
-                  this.errors.push("Please Enter your Lasr Name.")
-              }
-                if (!this.email) 
-                {
-                  this.errors.push('Email required.');
-                } else if (!this.validEmail(this.email)) 
-                {
-                 this.errors.push('Valid email required.');
-                 }
-
-             if (!this.errors.length) {
-             return true;
-             } 
-              e.preventDefault();
-         },
-
-          validEmail(email) {
-
-            /* eslint-disable-next-line */
-             var regexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          return regexp.test(email);
-       }
-    }
-}
 </script>
 
+
+
 <style scoped>
-.Contact-title
+
+
+#contact
 {
-  text-align: center;
-  position: relative;
-  margin-top: 10%;
- 
+  align-content: center;
+  align-items: center;
+  margin-left: 10%;
 }
-.Contact-title p
-{
-  font-size: 140%;
-  position: relative;
-}
+
+/* contact form title */
+
 form
 {
   margin-top: 4%;
   transition: all 4s ease-in-out;
+  align-self: center;
 }
 
 /* postion of the div of the contact form */
@@ -124,7 +56,9 @@ form
  
  margin-top: 2%;
  text-align: center;
-
+ align-items: center;
+ position: relative;
+ margin-left: 10%;
 
 }
 /* style for the form for each input */
@@ -147,8 +81,11 @@ form
   border-color: transparent;
   width: 20%;
   height:60px;
-  margin: 2%;
+  margin-top: 5%;
   font-size:120%;
+  margin-left:22%;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -200,15 +137,21 @@ form
 /* sumbit button */
 .submit
 {
+  position: relative;
+  margin-top: 10%;
   background: #191919;
   color: #FFFAFA;
   border-color: transparent;
   width: 20%;
   height:20px;
-  margin: 2%;
   font-size:80%;
 }
 
 
 }
 </style>
+
+
+
+
+
