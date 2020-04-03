@@ -60,8 +60,9 @@
             <p data-aos= "flip-down" data-aos-delay= "300">I,m full-stack developer / software Engineer </p>
         </div>
 
-        <div class = "About button">
-           <button class="home-button"></button>
+        <!-- This is the About me Button on the home SEction -->
+        <div class = "About-button">
+          <button class = "Home-button" type="button" onclick="#About">About Me </button>
         </div>
     </section>
 
@@ -332,6 +333,35 @@ nav a:hover::before
   text-align: center;
   font-size: 180%;
 }
+
+/* postion of  the about me button on the home page */
+.About-button
+{
+  position: absolute;
+  left: 48%;
+  top: 63%;
+  transform: translate(-50%, -50%);
+}
+
+.Home-button
+{
+  background: #191919;
+  color: #FFFAFA;
+  border-color: transparent;
+  width: 200%;
+  height:40px;
+  font-size: 120%;
+}
+
+.home-button:hover
+{
+  background: #FFFAFA;
+  color: #191919;
+}
+
+
+
+
 
 /* my name css */
 .myname
@@ -649,6 +679,15 @@ nav
 
 
 }
+
+/* end for the  media that have most of the phones */
+
+
+/* This is the styling for the iphone 6/8/7 and galaxy 5 and 6 */
+@media only screen and (min-device-width : 375px)  and (max-device-width : 667px)
+ {
+
+ }
 </style>
 
 
