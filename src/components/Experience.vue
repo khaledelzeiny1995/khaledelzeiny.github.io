@@ -2,11 +2,11 @@
  <div id = "expereince">
 
 
-     <p data-aos="fade-left" class = "title "> Eduction <p>
+     <p data-aos="fade-left" class = "title "> Education <p>
      <div class = "eduction-hig" id = "eduction-Hig">
          <P class = "des-01" data-aos="fade-up-right"  > High school </P>
-         <p class = "des-02" data-aos="fade-up-right" > The school of Research Sceince </p>
-         <p class = "des-03" data-aos="fade-up-right" > IGCSE/A level circuum </p>
+         <p class = "des-02" data-aos="fade-up-right" > The School of Research Science </p>
+         <p class = "des-03" data-aos="fade-up-right" > IGCSE/ A-Level Curriculum</p>
          <img data-aos="flip-right" class = "logo2" src= "./srs.jpg">  
          </div> <!-- end of the eduction div -->
 
@@ -14,21 +14,20 @@
          <div class = "eduction-uni" id = "eduction-Uni">
          <p class = "des-01" data-aos="fade-up-right" > University </p>
          <p class = "des-02" data-aos="fade-up-right" > University of Manitoba </p>
-         <p class = "des-03" data-aos="fade-up-right" > Bachlor of Science in computer Science </p>
+         <p class = "des-03" data-aos="fade-up-right" > BSc. In Computer Science </p>
          <p class = "des-03" data-aos="fade-up-right" > 2015 - 2021 </p>
           <img data-aos="flip-left" class = "logo" src= "./logo.svg" >
          </div> <!-- end of the eduction uni div -->
 
          <div class = "work-experience" id = "work-experience">
-             <p data-aos="zoom-out-right" class = "des-04"> work Experience </p>
+             <p data-aos="zoom-out-right" class = "des-04"> Work Experience </p>
              <p ata-aos="fade-right" class = "des-02"> Lily and Lou </p>
              <p data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" class = "des-03">I am a Full stack Developer trainee . During my internship 
-                 I worked on a project , 
-                 one of the projects was to create questionnaires using Vue.js framework , Html and CSS for building 
-                 a responsive UI and Django Rest framework for building database representation models , managing routes , 
-                 views and requests. Currently working on building a customizer using Vue.js for building 
-                 responsive UI for the customizer so users can customise there cloth height , width , colour and design there preferred style .</p>    
+     data-aos-anchor-placement="top-bottom" class = "des-03">I am a full-stack developer trainee. During my internship 
+     I worked on various projects, one of which was to create questionnaires using Vue.js framework. I’ve also used HTML
+      and CSS for building a responsive UI and Django Rest Framework for building database representation models, managing routes, 
+      views and requests. Currently working on building a customizer using Vue.js for building responsive UI 
+     for customizer to allow users to customise their clothes’ width, length, colour, design and preferred style.</p>    
          </div>
          <!-- this the work expereince div -->
 
@@ -36,16 +35,14 @@
 
              <p data-aos="zoom-out-right" class = "des-04">Projects</p>
              <p  data-aos="fade-right" class = "des-02"> Portfolio </p>
-             <p data-aos="zoom-in-down" class = "des-03"> building my portfolio using Vue.js , Html and CSS for responsive UI . Also 
-                 I am using Django REST framework for 
-                 building the contact form routes and requests . 
-                 https://github.com/khaledelzeiny1995/khaled-website</p>
+             <p data-aos="zoom-in-down" class = "des-03"> Building my portfolio using Vue.js, HTML and CSS for responsive UI. Also,
+                  I am using Express.js and mangodb to build Back-End for the contact form routes and requestste</p>
 
            <p data-aos="fade-right" class = "des-02"> Ezolopy </p>
            <p data-aos="zoom-in-down" class = "des-03"> I am building a website for a startup company called Ezolopy .
                 a responsive UI using react.js , Html and css. Plus , 
-               I am using exprdes-03ess.js and mongodb to manage routes , 
-               views and requests. https://github.com/ezlopy/Main-site </p>      
+               I am using express.js and mongodb to manage routes , 
+               views and requests.</p>      
           </div>
           <!-- end of the projects div -->       
          </div>
@@ -266,6 +263,7 @@ export default {
     letter-spacing: 2pt;
     font-size: 50%;
     line-height: 350%;
+    font-size:40%;
 }
 
 }

@@ -8,7 +8,10 @@ import VueParticles from 'vue-particles'
 // this is for the scroll reavel
 import AOS from "aos"
 import "aos/dist/aos.css"
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
 
 
 
