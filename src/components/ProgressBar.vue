@@ -2,16 +2,16 @@
   <div id = "progressBar">
     <ul>
         
-      <li class = "html">Html</li>
-      <li class = "html"> Css </li>
-      <li class = "java"> Java</li>
-      <li class = "java"> python </li>
-      <li class = "docker"> Docker cloud platform </li> 
-      <li class = "vue"> Vue.js</li>
-      <li class = "react"> React.js</li> 
-      <li class = "django">Django REST framework </li> 
-      <li class = "node"> Node.js / Express.js</li> 
-      <li class = "git"> Git / Github </li> 
+      <li class = "html" id ="liststlye">Html</li>
+      <li class = "html" id ="liststlye"> Css </li>
+      <li class = "java" id ="liststlye"> Java</li>
+      <li class = "java" id ="liststlye" > Python </li>
+      <li class = "docker" id ="liststlye"> Docker cloud platform </li> 
+      <li class = "vue" id ="liststlye"> Vue.js</li>
+      <li class = "react" id ="liststlye"> React.js</li> 
+      <li class = "django" id ="liststlye" >Django REST framework </li> 
+      <li class = "node" id ="liststlye" > Node.js / Express.js</li> 
+      <li class = "git" id ="liststlye" > Git / Github </li> 
 
       </ul>
   </div>
@@ -24,15 +24,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-li {
+<style >
+#liststlye {
     position: relative;
     list-style: none;
     margin: 50px 0;
     font-weight: 500;
 }
 
-li:before {
+#liststlye:before {
     content: "";
     position: absolute;
     top: calc(100% + 10px);
@@ -42,7 +42,7 @@ li:before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-li:after {
+#liststlye:after {
     content: "";
     position: absolute;
     top: calc(100% + 10px);
@@ -150,17 +150,17 @@ li.git:after {
 
 /* resposive part for thr porgressBar */
 
-@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)
+@media (max-device-width: 1024px)
 {
-
-li {
+#liststlye {
  position: relative;
  list-style: none;
  margin: 50px 0;
- font-size: 80%;
+ font-size: 95%;
+ text-align: left;
 }
 
-li:before {
+#liststlye:before {
     content: "";
     position: absolute;
     top: calc(100% + 10px);
@@ -170,7 +170,40 @@ li:before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-li:after {
+#liststlye:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgba(0, 0, 0);
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+ }
+}
+@media (max-device-width: 960px)
+{
+    #liststlye {
+ position: relative;
+ list-style: none;
+ margin: 50px 0;
+ font-size: 85%;
+ text-align: left;
+}
+
+#liststlye:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#liststlye:after {
     content: "";
     position: absolute;
     top: calc(100% + 10px);
@@ -182,6 +215,44 @@ li:after {
     animation-timing-function:ease-in-out;
     animation-fill-mode: forwards;
 }
-
 }
+
+
+@media (max-device-width: 625px)
+{
+    #liststlye {
+ position: relative;
+ list-style: none;
+ margin: 50px 0;
+ font-size: 75%;
+ text-align: left;
+}
+
+#liststlye:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#liststlye:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 0;
+    height: 15px;
+    background-color: rgba(0, 0, 0);
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+}
+}
+
+
+
+
 </style>

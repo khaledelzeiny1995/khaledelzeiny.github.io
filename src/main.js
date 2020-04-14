@@ -1,23 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Vuesax from 'vuesax'
-import 'vuesax/dist/vuesax.css'
 import VueParticles from 'vue-particles'
-
-
+Vue.use(VueParticles)
+        
 // this is for the scroll reavel
 import AOS from "aos"
 import "aos/dist/aos.css"
 import axios from 'axios'
 import VueAxios from 'vue-axios'
  
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
+
+
+
+
+
 Vue.use(VueAxios, axios)
 
-
-
-
-Vue.use(VueParticles)
-Vue.use(Vuesax)
 
 Vue.config.productionTip = false
 

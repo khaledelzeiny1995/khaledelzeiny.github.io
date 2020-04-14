@@ -11,7 +11,7 @@
       <img src="./icons8-instagram-50.png" />
     </a>
     <!-- Gmail media logo -->
-    <a href="#" class="social-icon">
+    <a href="mailto:khaledelzeiny1995@gmail.com" class="social-icon">
       <img src="./icons8-gmail-50.png" />
     </a>
     <!-- linkdin media logo -->
@@ -60,12 +60,29 @@ export default {
 }
 
 /* Responsive part for the socialmedia companent */
-@media only screen and (max-device-width: 480px),
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (-webkit-device-pixel-ratio: 1.5) {
+@media only screen and (max-device-width: 1024px) 
+{
+.social-icon img {
+  width: 15px;
+}
+}
+
+@media only screen and (max-device-width: 960px) 
+{
 
 .social-icon img {
-  width: 10px;
+  width: 15px;
+}
+
+}
+
+
+@media only screen and (max-device-width: 625px) 
+{
+
+.social-icon img {
+  width: 15px;
 }
 }
+
 </style>

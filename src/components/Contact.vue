@@ -2,21 +2,20 @@
   <div id="Contact">
     <!-- title of the contact Form -->
 
-    <form id="Contact-form0" @click="onSubmit($event)">
-      <div data-aos="fade-right" class="Contact-form"   >
-        <input type="text" class="formStyle" value placeholder="Name" v-model="User.name" required />
+    <form id="Contact-form0" action="https://formspree.io/maydljzz" method="POST" @click=" onSubmit('event')">
+      <div class="Contact-form">
+        <input type="text" name = "name" class="formStyle" value placeholder="Name" v-model="User.name" required />
 
         <input
           type="email"
           class="formStyle"
-          value
+          name = "_replyto"
           placeholder="name@email.com"
           v-model="User.email"
           required
         />
 
-        <textarea
-          name="comment"
+        <textarea name="message"
           class="formStyle"
           form="Contact-form"
           required
@@ -34,6 +33,8 @@
 <script>
 import axios from 'axios'
 
+
+
 export default {
   name: "contact",
   data() {
@@ -44,7 +45,7 @@ export default {
         email: "",
         message: ""
       }
-    };
+    }; 
   },
   methods: {
 
@@ -65,6 +66,7 @@ export default {
       .then((response) =>{
         console.log(response.data);
         alert('Thank you for Contacting Me.');
+        return false;                                                                                     
       })
       .catch((error) => {
         console.log(error);
@@ -78,10 +80,12 @@ export default {
 
 
 <style scoped>
+
+
 #contact {
   align-content: center;
   align-items: center;
-  margin-left: 10%;
+  margin:0;
 }
 
 /* contact form title */
@@ -90,6 +94,7 @@ form {
   margin-top: 4%;
   transition: all 4s ease-in-out;
   align-self: center;
+  color:#191919;
 }
 
 /* postion of the div of the contact form */
@@ -98,7 +103,8 @@ form {
   text-align: center;
   align-items: center;
   position: relative;
-  margin-left: 10%;
+  margin-left: 20%;
+  color:#191919;
 }
 /* style for the form for each input */
 .formStyle {
@@ -124,10 +130,18 @@ form {
   align-items: center;
   text-align: center;
 }
-
-@media only screen and (max-device-width: 480px),
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  screen and (-webkit-device-pixel-ratio: 1.5) {
+.submit:hover
+{
+  background-color: #fffafa;
+  color:#191919;
+}
+.submit:v
+{
+  background-color:#fffafa;
+  color: #191919;
+}
+@media only screen and (max-device-width: 1024px)
+{
   .Contact-title {
     text-align: center;
     position: relative;
@@ -147,6 +161,10 @@ form {
   .contact-form {
     margin-top: 4%;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
   /* style for the form for each input */
   .formStyle {
@@ -168,8 +186,41 @@ form {
     color: #fffafa;
     border-color: transparent;
     width: 20%;
-    height: 20px;
-    font-size: 50%;
+    height: 30px;
+    font-size: 65%;
+    -webkit-appearance: none;
+  }
+}
+
+@media only screen and (max-device-width: 960px)
+{
+/* sumbit button */
+  .submit {
+    position: relative;
+    margin-top: 10%;
+    background: #191919;
+    color: #fffafa;
+    border-color: transparent;
+    width: 20%;
+    height: 30px;
+    font-size: 65%;
+    -webkit-appearance: none;
+  }
+}
+
+@media only screen and (max-device-width: 625px)
+{
+  /* sumbit button */
+  .submit {
+    position: relative;
+    margin-top: 10%;
+    background: #191919;
+    color: #fffafa;
+    border-color: transparent;
+    width: 20%;
+    height: 30px;
+    font-size: 65%;
+    -webkit-appearance: none;
   }
 }
 </style>

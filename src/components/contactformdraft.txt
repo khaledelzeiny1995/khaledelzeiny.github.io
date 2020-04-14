@@ -1,0 +1,24 @@
+<form id="Contact-form0" method="post" action="mailto:k.m.elzeiny1995@live.com" >
+      <div class="Contact-form">
+        <input type="text" class="formStyle" value placeholder="Name" v-model="User.name" required />
+
+        <input
+          type="email"
+          class="formStyle"
+          value
+          placeholder="name@email.com"
+          v-model="User.email"
+          required
+        />
+
+        <textarea
+          name="comment"
+          class="formStyle"
+          form="Contact-form"
+          required
+          placeholder="Message"
+          v-model="User.message"
+        ></textarea>
+      </div>
+      <input type="submit" class="submit" value="SUBMIT"  />
+    </form>

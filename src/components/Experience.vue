@@ -2,48 +2,46 @@
  <div id = "expereince">
 
 
-     <p data-aos="fade-left" class = "title "> Education <p>
+     <p data-aos="fade-left" data-aos-duration="1500" class = "title "> Education <p>
      <div class = "eduction-hig" id = "eduction-Hig">
-         <P class = "des-01" data-aos="fade-up-right"  > High school </P>
-         <p class = "des-02" data-aos="fade-up-right" > The School of Research Science </p>
-         <p class = "des-03" data-aos="fade-up-right" > IGCSE/ A-Level Curriculum</p>
-         <img data-aos="flip-right" class = "logo2" src= "./srs.jpg">  
+         <P class = "des-01" data-aos="fade-up-right" data-aos-duration="1500" > High school </P>
+         <p class = "des-02" data-aos="fade-up-right" data-aos-duration="1500" > The School of Research Science </p>
+         <p class = "des-03" data-aos="fade-up-right" data-aos-duration="1500" > IGCSE/ A-Level Curriculum</p>
+         <img data-aos="flip-right" data-aos-duration="1000" class = "logo2" src= "./srs.jpg">  
          </div> <!-- end of the eduction div -->
 
 
          <div class = "eduction-uni" id = "eduction-Uni">
-         <p class = "des-01" data-aos="fade-up-right" > University </p>
-         <p class = "des-02" data-aos="fade-up-right" > University of Manitoba </p>
-         <p class = "des-03" data-aos="fade-up-right" > BSc. In Computer Science </p>
-         <p class = "des-03" data-aos="fade-up-right" > 2015 - 2021 </p>
-          <img data-aos="flip-left" class = "logo" src= "./logo.svg" >
+         <p class = "des-01" data-aos="fade-up-right" data-aos-duration="1500" > University </p>
+         <p class = "des-02" data-aos="fade-up-right" data-aos-duration="1500" > University of Manitoba </p>
+         <p class = "des-03" data-aos="fade-up-right" data-aos-duration="1500" > BSc. In Computer Science </p>
+         <p class = "des-03" data-aos="fade-up-right" data-aos-duration="1500" > 2015 - 2021 </p>
+          <img data-aos="flip-left" data-aos-duration="1000" class = "logo3" src= "./logo.svg" >
          </div> <!-- end of the eduction uni div -->
 
          <div class = "work-experience" id = "work-experience">
-             <p data-aos="zoom-out-right" class = "des-04"> Work Experience </p>
-             <p ata-aos="fade-right" class = "des-02"> Lily and Lou </p>
-             <p data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" class = "des-03">I am a full-stack developer trainee. During my internship 
+             <p data-aos="zoom-out-right" data-aos-duration="1500" class = "des-05"> Work Experience </p>
+             <p ata-aos="fade-right" data-aos-duration="1500" class = "des-02"> Lily and Lou </p>
+             <p data-aos="fade-up" data-aos-duration="1500"
+     data-aos-anchor-placement="top-bottom" class = "des-06">I am a full-stack developer trainee. During my internship 
      I worked on various projects, one of which was to create questionnaires using Vue.js framework. I’ve also used HTML
       and CSS for building a responsive UI and Django Rest Framework for building database representation models, managing routes, 
       views and requests. Currently working on building a customizer using Vue.js for building responsive UI 
-     for customizer to allow users to customise their clothes’ width, length, colour, design and preferred style.</p>    
+     for clients to allow users to customize their clothes’ width, length, colour, design and preferred style.</p>    
          </div>
          <!-- this the work expereince div -->
 
          <div class = "projects" id = "projects">
 
-             <p data-aos="zoom-out-right" class = "des-04">Projects</p>
-             <p  data-aos="fade-right" class = "des-02"> Portfolio </p>
-             <p data-aos="zoom-in-down" class = "des-03"> Building my portfolio using Vue.js, HTML and CSS for responsive UI. Also,
-                  I am using Express.js and mangodb to build Back-End for the contact form routes and requestste</p>
+             <p data-aos="zoom-out-right" data-aos-duration="1500" class = "des-04">Projects</p>
+             <p  data-aos="fade-right" data-aos-duration="1500" class = "des-02"> Portfolio </p>
+             <p data-aos="zoom-in-down" data-aos-duration="1500" class = "des-06"> Building my portfolio using Vue.js, HTML and CSS for responsive UI. Also,
+                  I am using Express.js and mangodb to build Back-End for the contact form routes and requests.</p>
 
-           <p data-aos="fade-right" class = "des-02"> Ezolopy </p>
-           <p data-aos="zoom-in-down" class = "des-03"> I am building a website for a startup company called Ezolopy .
-                a responsive UI using react.js , Html and css. Plus , 
-               I am using express.js and mongodb to manage routes , 
-               views and requests.</p>      
-          </div>
+           <p data-aos="fade-right" data-aos-duration="1500" class = "des-02"> Ezolopy </p>
+           <p data-aos="zoom-in-down" data-aos-duration="1500" class = "des-06"> Building my portfolio using Vue.js, HTML and CSS for responsive UI. Also,
+                  I am using Express.js and mangodb to build Back-End for the contact form routes and requests.</p>      
+          </div>  
           <!-- end of the projects div -->       
          </div>
           <!-- end of main div  -->
@@ -61,13 +59,18 @@ export default {
 </script>
 
 <style scoped>
+
+#expereince
+{
+    text-align: center;
+}
 /* CSS for the logo the university of manitoba*/
-.logo
+.logo3
 {
   display: inline-block;
-  width: 500px;
+  width: 400px;
   height: 250px;
-  object-fit: cover;
+  object-fit: fill;
   position: relative;
 }
  
@@ -77,9 +80,9 @@ export default {
 .logo2
 {
  display: inline-block;
-  width: 70%;
-  height: 60%;
-  object-fit: cover;
+  width: 85%;
+  height: 80%;
+  object-fit: fill;
   position: relative;
   margin-top:5%; 
 }
@@ -112,7 +115,7 @@ export default {
 .work-experience
 {
     
-    margin-top: 35%;
+    margin-top: 50%;
 
 }
 
@@ -120,9 +123,10 @@ export default {
 .des-04
 {
     text-align: center;
-    margin: 4%;
+    margin-top: 10%;
     letter-spacing: 10pt;
     font-weight: 800;
+    line-height: 350%;
 }
 
 /* des for the title that is above the div */
@@ -149,23 +153,40 @@ export default {
 /* des for the text in the divs */
 .des-03
 {
-    line-height: 130%;
+    line-height: 230%;
     letter-spacing: 2pt;
 }
 
 /* Responsive part for the expereince companent */
-@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2) , screen and (-webkit-device-pixel-ratio:1.5)
+.des-05
 {
+    margin-bottom: 3%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 130%;
+    font-weight: 800;
 
+}
+/* this for the pargraph in experience */
+.des-06
+{
+    line-height: 230%;
+    letter-spacing: 2pt;
+    width: 95%;
+    text-align-last:center;
+    font-size: 95%;
+}
 
-/* CSS for the logo the university of manitoba */
+/* Mobile view */
+@media only screen and (max-width: 1024px) {
 
-.logo
+/* CSS for the logo the university of manitoba*/
+.logo3
 {
   display: inline-block;
-  width: 50%;
-  height: 40%;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  object-fit:fill;
   position: relative;
 }
  
@@ -175,9 +196,127 @@ export default {
 .logo2
 {
  display: inline-block;
-  width: 50%;
-  height: 50%;
-  object-fit: cover;
+ width: 150px;
+ height: 150px;
+ object-fit: fill;
+ position: relative;
+ margin-top:6%; 
+}
+
+/* for the main title */
+.title
+{
+    font-size: 100%;
+    letter-spacing: 2pt;
+    font-weight: 600;
+    text-align: center;
+} 
+
+/* for thr high school des div */
+.eduction-hig
+{
+    float: left;
+    margin-left: 2%;
+    margin-top:10%;
+}
+/* for the uni des div */
+.eduction-uni
+{
+    float: right;
+    margin-right: 3%;
+    margin-top:10%;
+}
+
+/* work expereince dev */
+.work-experience
+{
+    
+    margin-top: 50%;
+
+}
+
+/* des for the main title like project and experience */
+.des-04
+{
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 10pt;
+    font-weight: 800;
+}
+
+/* des for the title that is above the div */
+.des-01
+{
+    margin-top: -10%;
+    font-size: 100%;
+    letter-spacing: 5pt;
+    font-weight: 700;
+    margin-bottom:2%;
+    text-align: center;
+}
+
+/* des for the tite for dives in expereince and projects */
+.des-02
+{
+
+    font-weight: 600;
+    font-size:80%;
+    line-height: 350%;
+    text-align: center;
+}
+
+/* des for the text in the divs */
+.des-03
+{
+    line-height: 140%;
+    letter-spacing: 2pt;
+    font-size: 70%;
+}
+
+/* Responsive part for the expereince companent */
+.des-05
+{
+    margin-bottom: 10%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 110%;
+    font-weight: 800;
+
+}
+
+.des-06
+{
+    line-height: 230%;
+    letter-spacing: 2pt;
+    width: 95%;
+    text-align-last:center;
+    font-size: 85%;
+}
+
+}
+
+@media only screen and (max-width:960px)
+{
+/* CSS for the logo the university of manitoba */
+
+.logo3
+{
+  display: inline-block;
+  width: 30%;
+  height: 30%;
+  object-fit: fill;
+  position: relative;
+}
+ 
+
+/* Css for the logo of the SRS school */
+
+.logo2
+{
+ display: inline-block;
+  width: 30%;
+  height: 30%;
+  object-fit: fill;
   position: relative; 
   margin:10px;
 }
@@ -185,21 +324,20 @@ export default {
 /* for the main title */
 .title
 {
-    margin-top: 4%;
-    font-size: 130%;
+    margin-top: 0.1%;
+    font-size: 100%;
     letter-spacing: 5pt;
     font-weight: 700;
-    margin-bottom: 5%;
-    margin-left: 2%;
     text-align: center;
+    margin-left: 1.5% ;
+    text-align-last: center;
 } 
 
 /* for thr high school des div */
 .eduction-hig
 {
-    margin-top: 30%;
-    margin-left: -1% ;
-    width: 100%;
+    margin-top: 15%;
+    width: 95%;
     align-items: center;
     align-self: center;
     text-align-last: center;
@@ -207,11 +345,9 @@ export default {
 /* for the uni des div */
 .eduction-uni
 {
-    margin-right: 3%;
-    margin-top: 10%;
-    margin-left: -2%;
+    margin-top: 15%;
     margin-bottom: 15%;
-    width: 100%;
+    width: 95%;
     align-items: center;
     align-self: center;
     text-align-last: center;
@@ -221,15 +357,15 @@ export default {
 /* work expereince dev */
 .work-experience
 {
-    text-align: left;
-    margin-top: 25%;
+    text-align: center;
+    margin-top: 50%;
 }
 
 /* des for the main title like project and experience */
 .des-04
 {
     text-align: center;
-    margin-top: 15%;
+    margin-top: 10%;
     letter-spacing: 10pt;
     font-weight: 800;
     margin-bottom: 10%;
@@ -238,7 +374,7 @@ export default {
 /* des for the title that is above the div */
 .des-01
 {
-    margin-top: -5%;
+    margin-top: -4%;
     font-size: 80%;
     letter-spacing: 5pt;
     font-weight: 700;
@@ -261,10 +397,281 @@ export default {
 {
     line-height: 65%;
     letter-spacing: 2pt;
-    font-size: 50%;
+    font-size: 60%;
     line-height: 350%;
-    font-size:40%;
 }
 
+/* Responsive part for the expereince companent */
+.des-05
+{
+    margin-bottom: 10%;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 110%;
+    font-weight: 800;
+
+}
+.des-06
+{
+    line-height: 230%;
+    letter-spacing: 2pt;
+    width: 95%;
+    text-align-last:center;
+    font-size: 70%;
+}
+}
+
+@media only screen and (max-width: 645px) 
+{
+   /* CSS for the logo the university of manitoba */
+
+.logo3
+{
+  display: inline-block;
+  width: 30%;
+  height: 30%;
+  object-fit: fill;
+  position: relative;
+}
+ 
+
+/* Css for the logo of the SRS school */
+
+.logo2
+{
+ display: inline-block;
+  width: 30%;
+  height: 30%;
+  object-fit: fill;
+  position: relative; 
+  margin:10px;
+}
+
+/* for the main title */
+.title
+{
+    margin-top: 0.1%;
+    font-size: 80%;
+    letter-spacing: 5pt;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 1.5% ;
+    text-align-last: center;
+} 
+
+/* for thr high school des div */
+.eduction-hig
+{
+    margin-top: 15%;
+    width: 95%;
+    align-items: center;
+    align-self: center;
+    text-align-last: center;
+}
+/* for the uni des div */
+.eduction-uni
+{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 95%;
+    align-items: center;
+    align-self: center;
+    text-align-last: center;
+
+}
+
+/* work expereince dev */
+.work-experience
+{
+    text-align: center;
+    margin-top: 25%;
+}
+
+/* des for the main title like project and experience */
+.des-04
+{
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 10pt;
+    font-weight: 800;
+    margin-bottom: 10%;
+    font-size: 70%;
+}
+
+/* des for the title that is above the div */
+.des-01
+{
+    margin-top: -4%;
+    font-size: 60%;
+    letter-spacing: 5pt;
+    font-weight: 700;
+    margin-bottom:7%;
+    text-align: center;
+}
+
+/* des for the tite for dives in expereince and projects */
+.des-02
+{
+
+    font-weight: 600;
+    font-size:60%;
+    line-height: 350%;
+    text-align: center;
+}
+
+/* des for the text in the divs */
+.des-03
+{
+    line-height: 65%;
+    letter-spacing: 2pt;
+    font-size: 45%;
+    line-height: 350%;
+}
+ 
+/* Responsive part for the expereince companent */
+.des-05
+{
+    margin-bottom: 10%;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 80%;
+    font-weight: 800;
+
+ }
+
+ .des-06
+{
+    line-height: 230%;
+    letter-spacing: 2pt;
+    width: 95%;
+    text-align-last:center;
+    font-size: 60%;
+}
+}
+@media only screen and (max-width:400px) 
+{
+
+  /* CSS for the logo the university of manitoba */   
+.logo3
+{
+  display: inline-block;
+  width: 30%;
+  height: 30%;
+  object-fit: fill;
+  position: relative;
+}
+ 
+
+/* Css for the logo of the SRS school */
+
+.logo2
+{
+ display: inline-block;
+  width: 25%;
+  height: 30%;
+  object-fit: fill;
+  position: relative; 
+  margin:10px;
+}
+
+/* for the main title */
+.title
+{
+    margin-top: 0.1%;
+    font-size: 70%;
+    letter-spacing: 5pt;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 1.5% ;
+    text-align-last: center;
+} 
+
+/* for thr high school des div */
+.eduction-hig
+{
+    margin-top: 15%;
+    width: 95%;
+    align-items: center;
+    align-self: center;
+    text-align-last: center;
+}
+/* for the uni des div */
+.eduction-uni
+{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 95%;
+    align-items: center;
+    align-self: center;
+    text-align-last: center;
+
+}
+
+/* work expereince dev */
+.work-experience
+{
+    text-align: center;
+    margin-top: 25%;
+}
+
+/* des for the main title like project and experience */
+.des-04
+{
+    text-align: center;
+    margin-top: 10%;
+    letter-spacing: 10pt;
+    font-weight: 800;
+    margin-bottom: 10%;
+    font-size:60%;
+}
+
+/* des for the title that is above the div */
+.des-01
+{
+    margin-top: -4%;
+    font-size: 55%;
+    letter-spacing: 5pt;
+    font-weight: 700;
+    margin-bottom:7%;
+    text-align: center;
+}
+
+/* des for the tite for dives in expereince and projects */
+.des-02
+{
+
+    font-weight: 600;
+    font-size:55%;
+    line-height: 350%;
+    text-align: center;
+}
+
+/* des for the text in the divs */
+.des-03
+{
+    line-height: 65%;
+    letter-spacing: 2pt;
+    font-size: 40%;
+    line-height: 350%;
+}
+
+/* Responsive part for the expereince companent */
+.des-05
+{
+    margin-bottom: 10%;
+    padding-top: 10%;
+    text-align: center;
+    font-size: 80%;
+    font-weight: 800;
+
+ }
+ .des-06
+{
+    line-height: 230%;
+    letter-spacing: 2pt;
+    width: 95%;
+    text-align-last:center;
+    font-size: 45%;
+}
 }
 </style>
