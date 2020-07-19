@@ -3,40 +3,39 @@
 <div id="app">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
   <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <a href="#Home">
+          <img src="./assets/Khaled.png" alt="logo" class="logo" />
+        </a>
+        <div class="icon">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="links-wrapper active">
+          <div class="backdrop"></div>
+          <div class="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="links">
+            <li>
+              <a href="#Home">Home</a>
+            </li>
+            <li>
+              <a href="#About">About</a>
+            </li>
+            <li>
+              <a href="#Expereience">Experience</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <!-- section for the website -->
     <section class="section-01" id="Home">
-      <div class="wrapper">
-        <nav class="navbar">
-          <a href="#Home">
-            <img src="./assets/Khaled.png" alt="logo" class="logo" />
-          </a>
-          <div class="icon">
-            <i class="fas fa-bars"></i>
-          </div>
-
-          <div class="links-wrapper active">
-            <div class="backdrop"></div>
-            <div class="close-btn">
-              <i class="fas fa-times"></i>
-            </div>
-            <ul class="links">
-              <li>
-                <a href="#Home">Home</a>
-              </li>
-              <li>
-                <a href="#About">About</a>
-              </li>
-              <li>
-                <a href="#Expereience">Experience</a>
-              </li>
-              <li>
-                <a href="#Contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
       <vue-particles
         class="vue-particles"
         color="#0B0C10"
@@ -60,7 +59,7 @@
       <div class="main-text">
         <p data-aos="flip-down" data-aos-duration="3000">Hello , I'm</p>
         <p class="myname" data-aos="flip-down" data-aos-duration="3000">Khaled Elzeiny</p>
-        <p data-aos="flip-down" data-aos-duration="3000">full-stack developer / Software Engineer</p>
+        <p data-aos="flip-down" data-aos-duration="3000">Full-Stack Developer / Software Engineer</p>
       </div>
 
       <!-- This is the About me Button on the home SEction -->
@@ -107,7 +106,7 @@
     <section class="section-01 section-04" id="Contact">
       <div class="arrow-down"></div>
 
-      <div  class="Contact-title">
+      <div class="Contact-title">
         <p>Contact Me</p>
       </div>
       <!-- this is the contact component -->
@@ -116,9 +115,9 @@
       <div class="socialMedia-postion">
         <social></social>
       </div>
-      <div class = "copy-right">
+      <div class="copy-right">
         <p>KHALED ELZEINY © 2020</p>
-        </div>
+      </div>
     </section>
   </body>
 </div>
@@ -197,6 +196,8 @@ export default {
   padding: 10px 25px;
   box-sizing: border-box;
   overflow: hidden;
+  position: fixed;
+  z-index: 1;
 }
 .icon,
 .close-btn {
@@ -225,7 +226,7 @@ export default {
 .backdrop {
   display: none;
   animation: 0.4s ease-in-out fadeIn forwards;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -241,7 +242,7 @@ export default {
 
 /* Section 01 CSS */
 .section-01 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #f2aa4cff;
   overflow-x: hidden;
@@ -258,27 +259,25 @@ export default {
 /* main text in the home page */
 .main-text {
   color: white;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  bottom: 500px;
   text-align: center;
   font-size: 180%;
 }
 
 /* postion of  the about me button on the home page */
 .About-button {
-  position: absolute;
-  left: 48%;
-  top: 63%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  align-items: center;
+  bottom: 420px;
+  left: 45%;
 }
 /* home button styling */
 .Home-button {
   background-color: #191919;
   color: #fffafa;
   border-color: transparent;
-  width: 200%;
+  width: 10%;
   height: 40px;
   font-size: 110%;
   -webkit-appearance: none;
@@ -361,7 +360,7 @@ export default {
   text-align: center;
   position: relative;
   margin-top: 5%;
-  margin-bottom:5%
+  margin-bottom: 5%;
 }
 
 /* section 04 CSS */
@@ -409,8 +408,7 @@ export default {
 }
 
 /* copy right text in the bottom of the page */
-.copy-right
-{
+.copy-right {
   text-align: center;
   margin-top: 1.5%;
   font-size: 40%;
@@ -473,7 +471,7 @@ export default {
 
   /* Section 01 CSS */
   .section-01 {
-    height: auto;
+    height: 100%;
     width: 100%;
     background-color: #f2aa4cff;
     overflow-x: hidden;
@@ -482,7 +480,7 @@ export default {
   /* vue particles in home page */
   .vue-particles {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     margin: 0;
     padding: 0;
   }
@@ -490,27 +488,26 @@ export default {
   /* main text in the home page */
   .main-text {
     color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 400px;
     text-align: center;
-    font-size: 160%;
+    font-size: 3vw;
   }
 
   /* postion of  the about me button on the home page */
   .About-button {
-    position: absolute;
-    left: 45%;
-    top: 63%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    align-items: center;
+    bottom: 320px;
+    left: 43%;
   }
+
   /* home button styling */
   .Home-button {
     background-color: #191919;
     color: #fffafa;
     border-color: transparent;
-    width: 200%;
+    width: 15%;
     height: 40px;
     font-size: 110%;
     -webkit-appearance: none;
@@ -640,8 +637,7 @@ export default {
   }
 }
 
-.copy-right
-{
+.copy-right {
   text-align: center;
   margin-top: 1.5%;
   font-size: 50%;
@@ -655,7 +651,6 @@ export default {
     position: relative;
     overflow: hidden;
   }
-  
 
   /* Section 01 CSS */
   .section-01 {
@@ -664,6 +659,7 @@ export default {
     box-sizing: none;
     margin: 0;
     padding: 0;
+    height: 100%;
   }
 
   /* Styling for the responinsive navbar */
@@ -677,7 +673,7 @@ export default {
   }
 
   .links {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 90%;
@@ -730,37 +726,31 @@ export default {
   /* vue particles in home page */
   .vue-particles {
     width: 100%;
-    height: 70vh;
+    height: 70%;
   }
 
   /* main text in the home page */
   .main-text {
     color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 300px;
     text-align: center;
-    font-size: 110%;
+    font-size: 3vw;
   }
 
-  /* postion of the about button */
+  /* postion of  the about me button on the home page */
   .About-button {
-    color: white;
-    position: absolute;
-    left: 46%;
-    top: 65%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 90%;
+    position: relative;
+    align-items: center;
+    bottom: 200px;
+    left: 43%;
   }
-
   /* home button styling */
   .Home-button {
     background-color: #191919;
     color: #fffafa;
     border-color: transparent;
-    width: 170%;
+    width: 20%;
     height: 35px;
     font-size: 90%;
     -webkit-appearance: none;
@@ -873,16 +863,14 @@ export default {
   }
 }
 
-.copy-right
-{
+.copy-right {
   text-align: center;
   margin-top: 1.5%;
   font-size: 30%;
   font-weight: 650;
 }
-@media only screen and (max-width: 625px) 
-{
-   /* Section 01 CSS */
+@media only screen and (max-width: 625px) {
+  /* Section 01 CSS */
   .section-01 {
     position: relative;
     overflow: hidden;
@@ -960,7 +948,7 @@ export default {
   /* vue particles in home page */
   .vue-particles {
     width: 100%;
-    height: 70vh;
+    height: 100%;
   }
 
   /* main text in the home page */
@@ -1011,7 +999,7 @@ export default {
   }
   /* Section 01 CSS */
   .section-01 {
-    height: auto;
+    height:100vh;
     width: 100%;
     background-color: #f2aa4cff;
     box-sizing: border-box;
@@ -1037,7 +1025,7 @@ export default {
   .about-title {
     align-items: center;
     text-align: center;
-    font-size:95%;
+    font-size: 95%;
   }
 
   /* about component postion */
@@ -1073,7 +1061,7 @@ export default {
     align-items: center;
     text-align: center;
     margin-bottom: 10%;
-    font-size:90%;
+    font-size: 90%;
   }
 
   /* section 04 CSS */
@@ -1114,34 +1102,23 @@ export default {
   }
 
   /* copy right text in the bottom of the page */
-.copy-right
-{
-  text-align: center;
-  margin-top: 1.5%;
-  font-size: 30%;
-  font-weight: 650;
-}
+  .copy-right {
+    text-align: center;
+    margin-top: 1.5%;
+    font-size: 30%;
+    font-weight: 650;
+  }
 }
 
-@media only screen and (max-width:425px) 
-{
-   /* Section 01 CSS */
-  .section-01 {
-    position: relative;
-    overflow: hidden;
-  }
-  /* Section 01 CSS */
-  .section-01 {
-    height: 100vh;
-  }
-
+@media only screen and (max-width: 425px) {
   /* Section 01 CSS */
   .section-01 {
     width: 100%;
     background-color: #f2aa4cff;
     box-sizing: none;
     margin: 0;
-    padding: 0;
+    height: 100%;
+    overflow: hidden;
   }
 
   /* Styling for the responinsive navbar */
@@ -1155,7 +1132,7 @@ export default {
   }
 
   .links {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 90%;
@@ -1219,7 +1196,7 @@ export default {
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 90%;
+    font-size: 130%;
   }
 
   /* postion of the about button */
@@ -1227,10 +1204,10 @@ export default {
     color: white;
     position: absolute;
     left: 46%;
-    top: 60%;
+    top: 78%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size: 90%;
+    font-size: 110%;
   }
 
   /* home button styling */
@@ -1238,7 +1215,7 @@ export default {
     background-color: #191919;
     color: #fffafa;
     border-color: transparent;
-    width: 160%;
+    width: 170%;
     height: 25px;
     font-size: 60%;
     -webkit-appearance: none;
@@ -1285,7 +1262,7 @@ export default {
   .about-title {
     align-items: center;
     text-align: center;
-    font-size:85%;
+    font-size: 85%;
   }
 
   /* about component postion */
@@ -1321,7 +1298,7 @@ export default {
     align-items: center;
     text-align: center;
     margin-bottom: 10%;
-    font-size:90%;
+    font-size: 90%;
   }
 
   /* section 04 CSS */
@@ -1341,7 +1318,7 @@ export default {
   .section-04 {
     width: 100%;
     box-sizing: border-box;
-    height: auto ;
+    height: auto;
     background-color: #f2aa4cff;
   }
 
@@ -1362,13 +1339,249 @@ export default {
   }
 
   /* copy right text in the bottom of the page */
-.copy-right
-{
-  text-align: center;
-  margin-top: 1.5%;
-  font-size: 20%;
-  font-weight: 650;
+  .copy-right {
+    text-align: center;
+    margin-top: 1.5%;
+    font-size: 20%;
+    font-weight: 650;
+  }
 }
-  
-}  
+
+
+@media only screen and (max-width: 375px) {
+  /* Section 01 CSS */
+  .section-01 {
+    width: 100%;
+    background-color: #f2aa4cff;
+    box-sizing: none;
+    margin: 0;
+    height: 150vh;
+    overflow: hidden;
+  }
+
+  /* Styling for the responinsive navbar */
+  .icon,
+  .close-btn {
+    display: block;
+  }
+  .icon {
+    position: absolute;
+    right: 24px;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    right: -90%;
+    background: #191919;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+  }
+  .links li {
+    margin-right: 0;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+  }
+
+  .links li a {
+    color: #fffafa;
+    font-size: 50%;
+  }
+
+  .links li a:hover {
+    color: #f2aa4cff;
+  }
+  .close-btn {
+    position: absolute;
+    top: 24px;
+    right: -90vh;
+    color: #fffafa;
+    font-size: 1.2em;
+    z-index: 3;
+    transition: 0.3s ease-in-out;
+  }
+  .close-btn:hover {
+    color: #f2aa4cff;
+    cursor: pointer;
+  }
+  /* Open class */
+  .open .links {
+    right: 0;
+  }
+  .open .close-btn {
+    right: 32px;
+  }
+  .open .backdrop {
+    display: block;
+  }
+
+  /* vue particles in home page */
+  .vue-particles {
+    width: 100%;
+    height: 70vh;
+  }
+
+  /* main text in the home page */
+  .main-text {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 130%;
+  }
+
+  /* postion of the about button */
+  .About-button {
+    color: white;
+    position: absolute;
+    left: 46%;
+    top: 78%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 110%;
+  }
+
+  /* home button styling */
+  .Home-button {
+    background-color: #191919;
+    color: #fffafa;
+    border-color: transparent;
+    width: 170%;
+    height: 25px;
+    font-size: 60%;
+    -webkit-appearance: none;
+  }
+
+  .Home-button:focus {
+    background-color: #fffafa;
+    color: #191919;
+  }
+
+  .Home-button:visited {
+    background-color: #fffafa;
+  }
+
+  .home-button:hover {
+    background-color: #fffafa;
+    color: #191919;
+  }
+  /* Section 01 CSS */
+  .section-01 {
+    height: auto;
+    width: 100%;
+    background-color: #f2aa4cff;
+    box-sizing: border-box;
+  }
+
+  /* logo styling for responsive part*/
+  .logo {
+    float: left;
+    margin-left: 10%;
+    margin-top: 10%;
+    height: 30px;
+    background: transparent;
+  }
+
+  .section-02 {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  /* align the div of the about title  */
+  .about-title {
+    align-items: center;
+    text-align: center;
+    font-size: 85%;
+  }
+
+  /* about component postion */
+
+  .about-postion {
+    width: 90%;
+    align-items: center;
+  }
+
+  /* Expereience text */
+  .text-01 {
+    font-size: 130%;
+    margin-bottom: 0.5%;
+    align-items: center;
+  }
+
+  /* this the stle for the progress bar compnent */
+  .progress-bar-postion {
+    width: 95%;
+    margin-top: 1.5%;
+  }
+
+  /* Css for section 3 */
+  .section-03 {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  /* expereince title postion and styling */
+  .experience-title {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 90%;
+  }
+
+  /* section 04 CSS */
+
+  /* drawing the triangle in the contact form */
+  .arrow-down {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 250px solid transparent;
+    border-right: 300px solid transparent;
+    border-top: 90px solid white;
+    align-items: center;
+  }
+
+  /* section styling for section 4 */
+  .section-04 {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    background-color: #f2aa4cff;
+  }
+
+  /* contact componet postion */
+  .contact-postion {
+    position: relative;
+    margin-top: 20%;
+    align-items: center;
+  }
+
+  /* contact title of the contact section */
+  .Contact-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 100%;
+    position: relative;
+    margin-top: 20;
+  }
+
+  /* copy right text in the bottom of the page */
+  .copy-right {
+    text-align: center;
+    margin-top: 1.5%;
+    font-size: 20%;
+    font-weight: 650;
+  }
+}
 </style>
